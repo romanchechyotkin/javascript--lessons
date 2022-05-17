@@ -124,3 +124,5 @@ function minus(num1, num2) {
 }
 console.log(minus(1));
 console.log(minus(1, 1));
+console.dir(minus)
+

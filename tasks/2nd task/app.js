@@ -64,7 +64,7 @@ console.log(countBs('BbbbbBaasbBBB')); // 5
 console.log(countBs('                ')); // 0
 
 
-
+// написвать функцию, которая принимает строку и символ, выводит кол-во заданного символа
 function countChar(text, char){
     let counter = 0
     let result = 0

@@ -68,7 +68,7 @@ console.log(words);
 console.log(words.join(' '));
 
 
-// функция создает рандоиную точку в окружности
+// функция создает рандомную точку в окружности
 
 function randomPointOnCircle(radius){
     let angle = Math.random() * 2 * Math.PI

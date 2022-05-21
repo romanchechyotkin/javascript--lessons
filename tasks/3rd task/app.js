@@ -15,7 +15,6 @@ function range(start, end){
     }
     return list
 }
-
 console.log(range(1, 4));
 console.log(range(-5, 1));
 console.log(range(-10, 0));
@@ -50,13 +49,32 @@ console.log(range(-10, 0));
     аргумента, меняя порядок следования его элементов на обратный. Не используйте для этого стандартный метод reverse. 
 */ 
 
+function reverseArray(list){
+    let reverseArray = []
+    for(let counter = 1; counter <= list.length; counter++){
+        reverseArray.push(list[list.length - counter])
+    }
+    return reverseArray
+}
+console.log(reverseArray([1, 2, 4, 5]));
+console.log(reverseArray([10, 2, 41, 0]));
+console.log(reverseArray([-1, 22, 0, 0, 11, 2]));
 
 
-
-
-
-
-
+function reverseArrayinPlace(list){
+    for(let counter = 0; counter < list.length; counter+=2){
+        list.unshift(list[counter])
+    }
+    let length = list.length
+    for(let counter = 1; counter <= length / 2; counter++){
+        list.pop()
+    }
+    return list
+}
+console.log(reverseArrayinPlace([1, 2, 4, 5]));
+console.log(reverseArrayinPlace([11, 20, 24]));
+console.log(reverseArrayinPlace([1, 2, 4, 5, 2, 4, 6]));
+console.log(reverseArrayinPlace([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]));
 
 
 

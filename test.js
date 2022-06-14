@@ -1,21 +1,19 @@
-const list = ['apple', 'orange', 'pineapple', 'melon']
+const btnStart = document.querySelector('.beg')
+const btnEnd = document.querySelector('.fin')
+const output = document.querySelector('footer')
 
-const body = document.body
-const div = document.createElement('div')
-body.insertAdjacentElement('afterbegin', div)
+// btnStart.addEventListener('click', () => {
+//     document.addEventListener('mousemove', handle)
+// })
 
-for(let item of list){
-    let p = document.createElement('p')
-    p.innerText = item
-    p.classList.add('fruit')
-    div.append(p)
-}
+// btnEnd.addEventListener('click', () => {
+//     document.removeEventListener('mousemove', handle)
+// })
 
-const fruits = document.querySelectorAll('.fruit')
-for(let fruit of fruits){
-    fruit.addEventListener('click', () => {
-        const newdiv = document.createElement('div')
-        newdiv.textContent = 
-        body.append(newdiv)
-    })
-}
+// function handle(e){
+//     output.innerText = `X: ${e.pageX}px - Y: ${e.pageY}px`
+// }
+
+window.addEventListener('mousemove', (event) => {
+    output.innerText = `X: ${event.pageX}px - Y: ${event.pageY}px`
+})
